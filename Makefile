@@ -1,3 +1,18 @@
+build:
+	python -m build
+
+.PHONY: check
+check:
+	twine check dist/*
+
+.PHONY: upload-pypi
+upload-pypi:
+	twine upload dist/*
+
+.PHONY: upload-testpypi
+upload-testpypi:
+	twine upload -r testpypi dist/*
+
 .PHONY: gitignore
 gitignore:  ## create a .gitignore file from templates
 	bash config/make-gitignore.sh
