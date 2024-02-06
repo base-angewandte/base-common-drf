@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "base-common-drf"
-version = "0.1"
+version = "0.2"
 description = "Django app with common implementations for base Angewandte projects using Django REST Framework"
 readme = "README.md"
 requires-python = ">=3.8"
