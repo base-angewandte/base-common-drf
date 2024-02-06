@@ -17,6 +17,7 @@ classifiers = [
 dependencies = [
     "django>=4.2",
     "djangorestframework>=3.13",
+    "drf_spectacular>=0.26",
 ]
 
 [tool.setuptools]
