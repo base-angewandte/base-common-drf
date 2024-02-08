@@ -14,7 +14,7 @@ ERROR_RESPONSES = {
         ),
         examples=[
             OpenApiExample(
-                name='Error',
+                name=f'Error{status_code}',
                 value={'detail': detail},
                 status_codes=(status_code,),
             ),
