@@ -5,7 +5,7 @@ ERROR_RESPONSES = {
     status_code: OpenApiResponse(
         description=description,
         response=inline_serializer(
-            name='Error',
+            name=f'Error{status_code}',
             fields={
                 'detail': serializers.CharField(
                     help_text='A message describing the error'
