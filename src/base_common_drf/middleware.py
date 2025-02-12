@@ -11,6 +11,8 @@ class LanguageHeaderMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
 
+        self.languages_dict = dict(getattr(settings, 'LANGUAGES', ()))
+
         force_script_name = getattr(settings, 'FORCE_SCRIPT_NAME', '')
         api_prefix = getattr(settings, 'API_PREFIX', 'api/')
 
@@ -25,7 +27,7 @@ class LanguageHeaderMiddleware:
             accept_language_header = request.headers.get('accept-language')
 
             if (
-                accept_language_header in settings.LANGUAGES_DICT
+                accept_language_header in self.languages_dict
                 and request_cookie != accept_language_header
             ):
                 request.COOKIES[settings.LANGUAGE_COOKIE_NAME] = accept_language_header
