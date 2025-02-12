@@ -4,7 +4,7 @@ from django.conf import settings
 class LanguageHeaderMiddleware:
     """A middleware that overwrites the language cookie value if necessary.
 
-    Overwriting takes place for requests made by the API and when the
+    Overwriting takes place for requests made to the API, if the
     Accept-Language header differs from the language cookie value.
     """
 
