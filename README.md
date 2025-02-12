@@ -18,14 +18,11 @@ INSTALLED_APPS = [
     'base_common_drf',
 ]
 ```
-## Development guide
+## How to contribute
 
-If you intend to develop `base-components-drf` locally and want to test it in other base projects,   
-it is advised you make your intended changes in `base-components-drf`.   
-Then uninstall it from the other base project (ex. image, portofolio, showroom) you utilize it in.   
-Lastly, install the newest version of your changes with uv pip in the following way:  
-  
-`uv pip uninstall base-common-drf`      
-`uv pip install -e /local/path/of/your/base-common-drf` (with "-e" you command pip to not install the `base-common-drf` from PyPi, but your local version)  
-  
-This way you can successfully test your created feature, before the future release of `base-common-drf`.
+Follow [GitHub's Contribution Guide](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project) 
+on how to create a pull request.
+
+Before submitting a pull request, ensure that it is in line with our [Development Conventions](https://base-angewandte-docs.readthedocs.io/en/latest/dev_guide.html)
+and that you have tested the changes in a Django project. For that you can follow the Quick Start Guide,
+but instead of a normal pip install, install your local fork: `pip install -e /local/path/to/base-common-drf`
